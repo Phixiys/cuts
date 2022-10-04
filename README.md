@@ -3,10 +3,16 @@
 ![Borat's got your back!](/src/assets/img/borat.jpeg)
 
 ### To shave your back you're gonna need to run
-`yarn` or `npm install` (I prefer Yarn) in your terminal
+`yarn` (I prefer Yarn) 
+or 
+`npm install` 
+in your terminal to install all the necesarry packages.
 
 after that you need to run
-`yarn dev` or `npm run dev` in your terminal to run the App locally.
+`yarn dev` 
+or 
+`npm run dev` 
+in your terminal to run the App locally.
 
 
 ## Best of luck and hope you have a smooth experience.
