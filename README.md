@@ -1,4 +1,4 @@
-# ****Welcome to Cuts... We shave your back!**
+# **Welcome to Cuts... We shave your back!**
 
 ![Borat's got your back!](/src/assets/img/borat.jpeg)
 
