@@ -14,6 +14,6 @@ after that you need to run
 TODO:
 
 - [x] Build an awsome App.
-- [] Do some smooth page transitions.
-- [] Make a custom Select/Dropdown
-- [] Work on my naming game!
+- [ ] Do some smooth page transitions.
+- [ ] Make a custom Select/Dropdown
+- [ ] Work on my naming game!
