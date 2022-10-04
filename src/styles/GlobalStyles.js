@@ -13,8 +13,9 @@ const GlobalStyles = createGlobalStyle`
     --RedOrange: #f44336;
     --SummerSky: #29b6f6;
     --Porcelain: #e0ddda;
-    --Matterhorn: #565656;
-    --white: #FFFFFF;
+    --WhiteSmoke: #F1F1F1;
+    --Gainsboro: #DDDDDD;
+    --White: #FFFFFF;
     --MillerBanner: "MillerBanner";
     --Helvetica: "Helvetica", sans-serif;
   }

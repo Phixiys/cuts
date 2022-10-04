@@ -1,28 +1,44 @@
-import SalonItem from './SalonItem.jsx'
+import Stars from './Stars'
+import { ReactComponent as ChevronRight } from '../assets/svg/icn_chevron_right.svg'
+import { SalonListContainer, Time, Title, Info, Adress, TimeDuration, Cost, BorderBottom, SalonListWrapper, OpenHoursWrapper, StarRatingCount, Count, InfoWrapper, CostDurationWrapper, CostWrapper } from '../styles/SalonList.styles'
 
-// SVG:s
-import { ReactComponent as ChevronLeft } from '../assets/svg/icn_chevron_left.svg'
-import { ReactComponent as ChevronDown } from '../assets/svg/icn_chevron_down.svg'
-import { ReactComponent as Settings } from '../assets/svg/icn_settings.svg'
+const SalonList = ({ salonList, onCallback }) => {
 
-// Styles
-import { NavBar, SubNav, Main } from '../styles/SalonList.styles'
+  const handleClick = (id) => {
+    onCallback(id)
+  }
 
-const SalonList = ({}) => {
   return (
     <>
-      <NavBar>
-        <ChevronLeft />
-        <h3>Hår</h3>
-        <Settings />
-      </NavBar>
-      <SubNav>
-        <span>Price $25 - $50</span>
-        <ChevronDown />
-      </SubNav>
-      <Main>
-        <SalonItem />
-      </Main>
+      {salonList.map(salon => {
+        return (
+          <SalonListContainer onClick={() => handleClick(salon.id)} key={salon.id}>
+            <SalonListWrapper>
+              <OpenHoursWrapper>
+                <Time>{salon.openHours}.00</Time>
+              </OpenHoursWrapper>
+              <InfoWrapper>
+                <Title>{salon.name}</Title>
+                <Info>
+                  <StarRatingCount>
+                    <Stars starsCount={salon.stars} className="stars" />
+                    <Count>({salon.ratingCount})</Count>
+                  </StarRatingCount>
+                </Info>
+                <Adress>{salon.adress}</Adress>
+              </InfoWrapper>
+              <CostDurationWrapper>
+                <Cost>{salon.price}&nbsp;SEK</Cost>
+                <CostWrapper>
+                  <TimeDuration>{salon.duration}&nbsp;min</TimeDuration>
+                  <ChevronRight />
+                </CostWrapper>
+              </CostDurationWrapper>
+            </SalonListWrapper>
+            <BorderBottom />
+          </SalonListContainer>
+        )
+      })}
     </>
   )
 }
